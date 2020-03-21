@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+  <h1>Lemme Convert Your Temp</h1>
+    <button onclick="whatever()">click to convert</button>
+    <script src="script.js">
+      function whatever() {
+        function tempConvert(number) {
+            return (5 / 9) * (number - 32);
+        }
+
+        let degFahren = Number(prompt("Enter the degrees in Fahrenheit"));
+        let convertedTemp = tempConvert(degFahren);
+
+        let msg = `It is ${convertedTemp} degree Celsius, `;
+
+        if (degFahren < 69) {
+            msg = msg + "its cold out."
+        } else if (degFahren > 83) {
+            msg += "its hot out."
+        } else {
+            msg += "its warm out."
+        }
+
+        alert(msg);
+      }
+    </script>
+</body>
+
+</html>
